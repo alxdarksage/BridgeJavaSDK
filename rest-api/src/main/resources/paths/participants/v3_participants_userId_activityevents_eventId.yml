@@ -1,0 +1,22 @@
+delete:
+    operationId: deleteActivityEvent
+    summary: Delete an activity event record
+    tags:
+        - ActivityEvents
+        - _For Researchers
+    parameters:
+        - name: eventId
+          description: Event id to delete
+          required: true
+          in: path
+          type: string
+          format: string
+    responses:
+        200:
+            description: OK
+            schema:
+                $ref: ../../definitions/message.yml
+        401:
+            $ref: ../../responses/401.yml
+        403:
+            $ref: ../../responses/403_not_researcher.yml                
