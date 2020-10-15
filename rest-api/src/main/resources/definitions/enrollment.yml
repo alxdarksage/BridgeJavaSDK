@@ -3,6 +3,9 @@ type: object
 required:
     - userId
 properties:
+    studyId:
+        type: string
+        description: The identifier fo the study for the external ID.
     externalId:
         type: string
         description: An optional, arbitrary string identifier that identifies this user in an external system (as a member of this study; one external ID can be tracked per study).

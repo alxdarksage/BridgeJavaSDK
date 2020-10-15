@@ -7,10 +7,8 @@ properties:
     lastName:
         type: string
         description: Last name (family name) of the user.
-    externalId:
-        type: string
-        description: |
-            An externally-assignable identifier a research partner can use to re-identify a user's data in the exported data set (this must be provided by the application, it is not created by Bridge). The value can be set on creation or added on an account update, but it will be returned in the `externalIds` mapping which specifies the study within which the external ID was defined. This field will be null when retrieved from the server.
+    enrollment:
+        $ref: ./enrollment.yml
     synapseUserId:
         type: string
         description: |
@@ -80,6 +78,7 @@ properties:
         x-nullable: false
     studyIds:
         type: array
+        readOnly: true
         description: The studies this participant is associated to. For administrative accounts, these are the studies associated to the account's organization. For study participants, these will be the studies that the person is enrolled in.
         items:
             type: string
