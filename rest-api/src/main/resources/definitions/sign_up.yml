@@ -19,6 +19,9 @@ allOf:
             type: string
             format: password
             description: User's password.
+        externalId:
+            type: string
+            description: An external ID to use as a sign in credential.
         consent:
             type: boolean
             description: |
