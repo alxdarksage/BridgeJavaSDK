@@ -8,19 +8,10 @@ get:
     security:
         - BridgeSecurity: []
     parameters:
-        - name: offsetKey
-          type: string
-          in: query
-          required: true
-        - name: pageSize
-          type: integer
-          in: query
-          required: true
+        - $ref: ../../index.yml#/parameters/offsetBy
+        - $ref: ../../index.yml#/parameters/pageSize
         - name: idFilter
           type: string
-          in: query
-        - name: assignmentFilter
-          type: boolean
           in: query
     responses:
         200:
